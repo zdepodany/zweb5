@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zdeněk Podaný – UI/UX Designer. Moderní webové stránky pro malé firmy a živnostníky. Rychle, jednoduše, bez zbytečných technikálií.">
+  <title>Zdeněk Podaný | Webové stránky pro váš byznys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigace -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav-brand">
+        <a href="#" class="logo">Zdeněk Podaný</a>
+        <span class="availability availability--open" title="Přijímám nové zakázky">
+          <span class="availability-dot"></span>
+          <span class="availability-text">Přijímám zakázky</span>
+        </span>
+      </div>
+      <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#jak-spolupracujeme">Jak spolupracujeme</a></li>
+        <li><a href="#reference">Reference</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+      </div>
+      <div class="hero-content container">
+        <p class="hero-badge">UI/UX Designer pro malé firmy</p>
+        <h1 class="hero-title">
+          Webové stránky, které <span class="highlight">prodávají</span> – rychle a bez komplikací
+        </h1>
+        <p class="hero-subtitle">
+          Vytvořím vám moderní a přehledný web během několika dní. Vy se soustřeďte na podnikání, techniku nechte na mně.
+        </p>
+        <div class="hero-cta">
+          <a href="#kontakt" class="btn btn-primary">Chci web – napište mi</a>
+          <a href="#cenik" class="btn btn-secondary">Kolik to stojí?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metriky -->
+    <section class="metrics-bar">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-number" data-count="17" data-suffix="+">0</span>
+            <span class="metric-label">webů pro malé firmy</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number" data-count="9" data-suffix="+">0</span>
+            <span class="metric-label">mobilních a webových aplikací</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number" data-count="7">0</span>
+            <span class="metric-label">let praxe v UX a designu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Služby -->
+    <section id="sluzby" class="section services">
+      <div class="container">
+        <h2 class="section-title">Co pro vás připravím</h2>
+        <p class="section-subtitle">Tři varianty podle toho, v jaké fázi podnikání se nacházíte. Všechny přehledné, funkční a bez zbytečné složitosti.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">01</div>
+            <h3>Jednoduchý prezentační web</h3>
+            <p>Ideální pro živnostníky, kteří chtějí mít na internetu profesionální vizitku. O vás, vaše služby a kontakt – přehledně a na jednom místě.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">02</div>
+            <h3>Web na rozjezd podnikání</h3>
+            <p>Rozběhnete nový byznys? Potřebujete web, který vás představí a přivede první zákazníky. Vše co potřebujete pro start, nic navíc.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">03</div>
+            <h3>Rychlý redesign webu</h3>
+            <p>Máte starý web, který už nevypadá dobře? Osvěžím ho – moderní vzhled, lepší použitelnost, funguje na mobilu. Bez zbytečného přepisování.</p>
+          </article>
+        </div>
+        <div class="services-cta">
+          <a href="#kontakt" class="btn btn-primary">Chci web</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jak spolupracujeme -->
+    <section id="jak-spolupracujeme" class="section process">
+      <div class="container">
+        <h2 class="section-title">Jak to probíhá – bez stresu</h2>
+        <p class="section-subtitle">Všechno složité řeším já. Vy mi řeknete, co potřebujete, a já to dodám.</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Napíšete mi, co potřebujete</h3>
+            <p>Stačí pár vět – kdo jste, co děláte a co od webu očekáváte. Nemusíte nic technického znát.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Domluvíme se na detailech</h3>
+            <p>Probereme obsah, barvy a strukturu. Zeptám se na to důležité, vy mi odpovíte jednoduše.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Vytvořím váš web</h3>
+            <p>Připravím návrh a po odsouhlasení web během několika dní spustíme.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Spustíme ho a jste online</h3>
+            <p>Pomůžu s nasazením, ukážu vám základy údržby. A máte hotovo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reference -->
+    <section id="reference" class="section testimonials">
+      <div class="container">
+        <h2 class="section-title">Co říkají klienti</h2>
+        <p class="section-subtitle">Reference od lidí, kterým jsem pomohl s webem.</p>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"S panem Podaným je velmi dobrá a rychlá spolupráce. Poskytuje kvalitní poradenství i pro osoby, kteří jsou absolutní počítačoví analfabeti. Obrátil jsem se na něj s požadavky na web pro začínajícího podnikatele. S webovými stránkami i s profesionálním přístupem jsem velmi spokojený."</p>
+            <footer class="testimonial-author">
+              <strong>— Petr</strong>, majitel<br>
+              <a href="https://izolacekracman.cz" target="_blank" rel="noopener">Izolace Petr Kráčman</a>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"Celá spolupráce probíhala naprosto hladce a výsledek předčil naše očekávání! Hlavně se nám líbí moderní, jednoduchý, ale přesto hravý design, který pro náš web zpracoval. Stejně tak z uživatelského hlediska je web velmi příjemný. Moc děkujeme a těšíme se na další spolupráci."</p>
+            <footer class="testimonial-author">
+              <strong>— Tadeáš</strong>, CEO<br>
+              <a href="https://studiobarak.cz" target="_blank" rel="noopener">Studio Barak</a>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"Se Zdeňkem jsme spolupracovali na tvorbě webu pro spolek Mackovská chasa z. s. Od začátku bylo vidět, že rozumí nejen technické stránce, ale i tomu, jak má web působit na lidi. Výsledkem je přehledný a důstojný web, který dobře prezentuje naši činnost, historii i akce. Spolupráce byla bezproblémová a vše probíhalo podle domluvy."</p>
+            <footer class="testimonial-author">
+              <strong>— Milan</strong>, předseda spolku<br>
+              <a href="https://www.mackovskachasa.cz" target="_blank" rel="noopener">Mackovská chasa z.s.</a>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ceník -->
+    <section id="cenik" class="section pricing">
+      <div class="container">
+        <h2 class="section-title">Orientační ceník</h2>
+        <p class="section-subtitle">Transparentní odhady – u každé služby víte, do čeho jdete.</p>
+        <div class="pricing-grid">
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Nejoblíbenější</span>
+            <h3>Jednoduchý prezentační web</h3>
+            <div class="price">od 8 000 Kč</div>
+            <p>Základní web s informacemi o vás a vašich službách.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Web na rozjezd podnikání</h3>
+            <div class="price">od 12 000 Kč</div>
+            <p>Kompletnější web pro nový byznys s důrazem na první zákazníky.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Rychlý redesign webu</h3>
+            <div class="price">od 6 000 Kč</div>
+            <p>Osvěžení stávajícího webu – nový vzhled, lepší použitelnost.</p>
+          </div>
+        </div>
+        <p class="pricing-note">Přesnou cenu vždy víte předem. Bez překvapení a skrytých poplatků.</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Napište mi</h2>
+        <p class="section-subtitle">Máte dotaz nebo chcete začít? Napište, co potřebujete – ozvu se co nejdřív.</p>
+        <form class="contact-form" action="https://formspree.io/f/mojnvrpp" method="POST">
+          <div class="form-group">
+            <label for="name">Jméno</label>
+            <input type="text" id="name" name="name" required placeholder="Vaše jméno">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="vas@email.cz">
+          </div>
+          <div class="form-group">
+            <label for="service">Požadovaná služba</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Vyberte službu</option>
+              <option value="Jednoduchý prezentační web">Jednoduchý prezentační web</option>
+              <option value="Web na rozjezd podnikání">Web na rozjezd podnikání</option>
+              <option value="Redesign">Redesign</option>
+              <option value="Ještě nevím">Ještě nevím</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Co vás zajímá?</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Napište mi, co potřebujete – typ webu, termín, dotazy..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" data-submit-text="Odeslat zprávu" data-sending-text="Odesílám...">
+            Odeslat zprávu
+          </button>
+        </form>
+        <div class="form-feedback" role="status" aria-live="polite" hidden></div>
+        <p class="contact-alternative">Nebo mi napište přímo na <a href="mailto:zdepodany@gmail.com">zdepodany@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Zdeněk Podaný</span>
+          <p>UI/UX Designer – webové stránky pro malé firmy a živnostníky</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontakt</h4>
+          <p>Email: <a href="mailto:zdepodany@gmail.com">zdepodany@gmail.com</a></p>
+          <p>Telefon: <a href="tel:+420735945421">+420 735 945 421</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/zdenekpodany/" target="_blank" rel="noopener">zdenekpodany</a></p>
+        </div>
+        <div class="footer-legal">
+          <h4>Údaje</h4>
+          <p>IČO: 07864825</p>
+          <p>Bankovní účet: 6557870369 / 0800</p>
+          <p>IBAN: CZ07 0800 0000 0065 5787 0369</p>
+          <p>© <span id="current-year">2025</span> Zdeněk Podaný</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
