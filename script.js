@@ -144,6 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
 
         if (data.ok) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              service_type: formData.get('service') || 'neuvedeno',
+              method: 'contact_form'
+            });
+          }
           formFeedback.textContent = 'Zpráva byla odeslána. Děkuji, ozvu se vám co nejdříve.';
           formFeedback.classList.add('form-feedback--success');
           contactForm.reset();
