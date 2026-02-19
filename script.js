@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(data.error || 'Něco se pokazilo.');
         }
       } catch (err) {
-        formFeedback.textContent = 'Něco se pokazilo. Zkuste to prosím znovu nebo mi napište přímo na zdepodany@gmail.com.';
+        formFeedback.textContent = 'Něco se pokazilo. Zkuste to prosím znovu nebo mi napište přímo na zdenek@zdenekpodany.cz.';
         formFeedback.classList.add('form-feedback--error');
       } finally {
         submitBtn.disabled = false;
