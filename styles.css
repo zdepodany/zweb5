@@ -506,6 +506,193 @@ body {
   font-size: 0.95rem;
 }
 
+/* ========== Proč má kvalitní web smysl (porovnání) ========== */
+.comparison {
+  background: var(--text);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.comparison .section-title {
+  color: white;
+}
+
+.comparison .section-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.comparison-table {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-cell {
+  padding: 20px 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.comparison-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.comparison-icon--cross {
+  color: #ef4444;
+}
+
+.comparison-icon--cross::before {
+  content: '✗';
+}
+
+.comparison-icon--check {
+  color: #22c55e;
+}
+
+.comparison-icon--check::before {
+  content: '✓';
+}
+
+.comparison-cell-label {
+  display: none;
+}
+
+.comparison-cell--negative {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-cell--positive {
+  background: rgba(0, 109, 236, 0.2);
+  color: white;
+}
+
+.comparison-header .comparison-cell--negative {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.comparison-header .comparison-cell--positive {
+  background: var(--primary);
+  color: white;
+}
+
+.comparison-cta-button {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.comparison-cta-button .btn {
+  font-size: 0.9rem;
+  padding: 12px 24px;
+}
+
+.comparison-cta {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobil – karty místo tabulky, každé porovnání samostatně */
+@media (max-width: 640px) {
+  .comparison-table {
+    border: none;
+    display: block;
+  }
+
+  .comparison-header {
+    display: none;
+  }
+
+  .comparison-row {
+    display: block;
+    grid-template-columns: unset;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .comparison-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .comparison-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .comparison-cell-label {
+    display: block;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    flex-basis: 100%;
+    order: -1;
+  }
+
+  .comparison-cell {
+    flex-wrap: wrap;
+  }
+
+  .comparison-cell-label {
+    flex-basis: 100%;
+    order: -1;
+  }
+
+  .comparison-cell--negative {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .comparison-cell--negative .comparison-cell-label {
+    color: rgba(239, 68, 68, 0.9);
+  }
+
+  .comparison-cell--positive .comparison-cell-label {
+    color: rgba(34, 197, 94, 0.95);
+  }
+
+  .comparison-cta {
+    font-size: 1rem;
+  }
+}
+
 /* ========== Reference ========== */
 .testimonials-grid {
   display: grid;
@@ -785,12 +972,9 @@ body {
 
 /* ========== Mobilní menu ========== */
 @media (max-width: 768px) {
-  .availability-text {
-    display: none;
-  }
-
   .availability {
-    padding: 6px 10px;
+    padding: 5px 10px;
+    font-size: 0.7rem;
   }
 
   .nav-toggle {
