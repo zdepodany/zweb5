@@ -837,3 +837,223 @@ body {
     padding: 60px 0;
   }
 }
+
+/* ========== Cookie consent ========== */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 20px 0;
+  padding-bottom: max(20px, env(safe-area-inset-bottom));
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+  animation: cookieSlideUp 0.4s ease;
+}
+
+.cookie-consent[hidden] {
+  display: none !important;
+}
+
+@keyframes cookieSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-consent-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cookie-consent-text a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+
+.cookie-consent-text a:hover {
+  color: var(--primary-dark);
+}
+
+.cookie-consent-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.cookie-consent-accept {
+  flex-shrink: 0;
+}
+
+.cookie-consent-reject {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 10px 16px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.cookie-consent-reject:hover {
+  color: var(--text);
+}
+
+/* Tablet – začíná zalamování */
+@media (max-width: 900px) {
+  .cookie-consent-inner {
+    gap: 20px;
+  }
+
+  .cookie-consent-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .cookie-consent {
+    padding: 16px 0;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  .cookie-consent-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .cookie-consent-text {
+    font-size: 0.875rem;
+    min-width: unset;
+  }
+
+  .cookie-consent-actions {
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 12px;
+  }
+
+  .cookie-consent-accept {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cookie-consent-reject {
+    padding: 10px 16px;
+  }
+}
+
+/* Úzké displeje (malé telefony) */
+@media (max-width: 380px) {
+  .cookie-consent {
+    padding: 12px 0;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .cookie-consent-text {
+    font-size: 0.8125rem;
+  }
+
+  .cookie-consent-actions {
+    gap: 8px;
+  }
+}
+
+/* ========== Právní stránky (Zásady ochrany osobních údajů) ========== */
+.legal-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.legal-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+.legal-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.legal-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-content p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.legal-content ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.legal-content li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.legal-content a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.legal-content a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.legal-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+.legal-back {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.legal-back a {
+  font-weight: 500;
+}

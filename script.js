@@ -2,7 +2,50 @@
  * Zdeněk Podaný - Základní interaktivita
  */
 
+const COOKIE_CONSENT_KEY = 'cookie-consent';
+const GA_ID = 'G-HVYTTEV5WY';
+
+function loadGoogleAnalytics() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(script);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Cookie consent
+  const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+  const banner = document.getElementById('cookie-consent');
+  const acceptBtn = document.querySelector('.cookie-consent-accept');
+  const rejectBtn = document.querySelector('.cookie-consent-reject');
+
+  if (consent === 'accepted') {
+    loadGoogleAnalytics();
+  } else if (!consent) {
+    banner.hidden = false;
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+      loadGoogleAnalytics();
+      banner.hidden = true;
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_CONSENT_KEY, 'rejected');
+      banner.hidden = true;
+    });
+  }
+
   // Scroll reveal – elementy se zobrazí při vstupu do viewportu
   const revealElements = document.querySelectorAll(
     '.section-title, .section-subtitle, .service-card, .process-step, .testimonial-card, .pricing-card, .pricing-note, .contact-form'
