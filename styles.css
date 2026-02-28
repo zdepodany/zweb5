@@ -602,6 +602,23 @@ body {
   color: white;
 }
 
+.comparison-scenario {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
+}
+
+.comparison-scenario p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+
 .comparison-cta-button {
   text-align: center;
   margin-bottom: 32px;
@@ -686,6 +703,14 @@ body {
 
   .comparison-cell--positive .comparison-cell-label {
     color: rgba(34, 197, 94, 0.95);
+  }
+
+  .comparison-scenario {
+    padding: 20px 20px;
+  }
+
+  .comparison-scenario p {
+    font-size: 1rem;
   }
 
   .comparison-cta {
