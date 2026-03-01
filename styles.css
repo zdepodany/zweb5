@@ -821,6 +821,12 @@ body {
   font-weight: 700;
 }
 
+.showcase-card-benefit + .showcase-card-benefit {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: none;
+}
+
 .showcase-cta {
   text-align: center;
   margin-top: 48px;
