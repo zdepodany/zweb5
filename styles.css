@@ -129,14 +129,14 @@ body {
   padding: 10px 24px;
   border-radius: 100px;
   font-weight: 600;
-  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 4px 12px rgba(0, 109, 236, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 109, 236, 0.18);
+  transition: background-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .nav-cta:hover {
   background-color: #16a34a;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.32);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.38);
 }
 
 .nav-links a.nav-cta.active::after {
@@ -1490,18 +1490,32 @@ body {
 
 .footer-social {
   display: flex;
-  gap: 16px;
+  gap: 8px;
+  align-items: center;
 }
 
-.footer-social a {
-  color: rgba(255, 255, 255, 0.7);
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
-  transition: color var(--transition);
-  font-size: 0.9rem;
+  border-radius: 50%;
+  transition: color var(--transition), background-color var(--transition), transform var(--transition);
 }
 
-.footer-social a:hover {
+.footer-social-link:hover {
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-social-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
@@ -1539,6 +1553,54 @@ body {
   
   .footer-list a:hover {
     transform: none;
+  }
+}
+
+/* ========== Mobilní rychlé volání (FAB) ========== */
+.call-fab {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .call-fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 109, 236, 0.45);
+    z-index: 90;
+    text-decoration: none;
+    transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+    touch-action: manipulation;
+  }
+
+  .call-fab:hover,
+  .call-fab:active {
+    background: var(--primary-dark);
+    transform: scale(1.06);
+    box-shadow: 0 6px 26px rgba(0, 109, 236, 0.5);
+  }
+
+  .call-fab:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+
+  .call-fab-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Cookie lišta dole – FAB nepřekrývat tlačítka souhlasu */
+  body:has(.cookie-consent:not([hidden])) .call-fab {
+    bottom: calc(112px + env(safe-area-inset-bottom, 0px));
   }
 }
 
