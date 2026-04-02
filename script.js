@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll reveal – elementy se zobrazí při vstupu do viewportu
   const revealElements = document.querySelectorAll(
-    '.section-title, .section-subtitle, .service-card, .process-step, .comparison-table, .comparison-scenario, .comparison-cta-button, .comparison-cta, .showcase-card, .showcase-cta, .testimonials-carousel, .pricing-card, .pricing-note, .section-cta, .value-compare-panel, .contact-form'
+    '.section-title, .section-subtitle, .service-card, .process-step, .comparison-table, .comparison-scenario, .comparison-cta-button, .comparison-cta, .showcase-card, .showcase-cta, .testimonials-carousel, .pricing-card, .pricing-note, .section-cta, .value-compare-panel, .faq-item, .contact-form'
   );
 
   revealElements.forEach((el) => el.classList.add('reveal'));
@@ -262,6 +262,31 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => navMenu.classList.remove('active'));
     });
   }
+
+  // Plynulá animace FAQ karet
+  document.querySelectorAll('.faq-item').forEach(details => {
+    const summary = details.querySelector('.faq-question');
+    let timeout;
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const isCurrentlyOpen = details.classList.contains('is-open');
+      clearTimeout(timeout);
+
+      if (isCurrentlyOpen) {
+        details.classList.remove('is-open');
+        timeout = setTimeout(() => {
+          details.removeAttribute('open');
+        }, 450); // Odpovídá době trvání CSS transition (0.45s)
+      } else {
+        details.setAttribute('open', '');
+        // Vynucení překreslení prohlížečem (aby transition začal od 0)
+        details.offsetHeight;
+        details.classList.add('is-open');
+      }
+    });
+  });
 
   // Kontaktní formulář – odesílá přes Formspree
   const contactForm = document.querySelector('.contact-form');
