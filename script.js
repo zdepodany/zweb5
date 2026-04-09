@@ -59,9 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Sledování kliknutí na odkazy v menu (GA4)
+  document.querySelectorAll('.nav-links a').forEach((anchor) => {
+    anchor.addEventListener('click', function () {
+      if (typeof gtag !== 'function') return;
+      const targetId = this.getAttribute('href');
+      gtag('event', 'scroll_to_section', {
+        'section_id': targetId,
+        'event_category': 'navigation',
+        'page_path': window.location.pathname || '/'
+      });
+    });
+  });
+
   // Scroll reveal – elementy se zobrazí při vstupu do viewportu
   const revealElements = document.querySelectorAll(
-    '.section-title, .section-subtitle, .service-card, .process-step, .about-layout, .comparison-table, .comparison-scenario, .comparison-cta-button, .comparison-cta, .showcase-card, .showcase-cta, .testimonials-carousel, .pricing-card, .pricing-note, .section-cta, .value-compare-panel, .faq-item, .contact-form'
+    '.section-title, .section-subtitle, .service-card, .process-step, .about-layout, .comparison-table, .comparison-cta-button, .comparison-cta, .showcase-card, .showcase-cta, .testimonials-carousel, .pricing-card, .pricing-note, .section-cta, .value-compare-panel, .faq-item, .contact-form'
   );
 
   revealElements.forEach((el) => el.classList.add('reveal'));
