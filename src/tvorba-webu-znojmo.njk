@@ -1,54 +1,10 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zapomeňte na pomalý WordPress. Stavím ultra-rychlé custom weby a aplikace ve Znojmě, které vám skutečně vydělají. Podívejte se na mé reference.">
-  <meta name="revised" content="6. dubna 2026">
-  <title>Webovky a appky na míru Znojmo | Žádné šablony</title>
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zdenekpodany.cz/tvorba-webu-znojmo">
-  <meta property="og:title" content="Webovky a appky na míru Znojmo | Žádné šablony">
-  <meta property="og:description" content="Zapomeňte na pomalý WordPress. Stavím ultra-rychlé custom weby a aplikace ve Znojmě, které vám skutečně vydělají. Podívejte se na mé reference.">
-  <meta property="og:image" content="https://zdenekpodany.cz/img/og-image.jpg">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://zdenekpodany.cz/tvorba-webu-znojmo">
-  <meta property="twitter:title" content="Webovky a appky na míru Znojmo | Žádné šablony">
-  <meta property="twitter:description" content="Zapomeňte na pomalý WordPress. Stavím ultra-rychlé custom weby a aplikace ve Znojmě, které vám skutečně vydělají. Podívejte se na mé reference.">
-  <meta property="twitter:image" content="https://zdenekpodany.cz/img/og-image.jpg">
-  <!-- Google Analytics se načte až po souhlasu s cookies (script.js) -->
-  <link rel="canonical" href="https://zdenekpodany.cz/tvorba-webu-znojmo">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Navigace -->
-  <header class="header">
-    <nav class="nav container">
-      <div class="nav-brand">
-        <a href="/" class="logo">Zdeněk Podaný</a>
-      </div>
-      <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="/#ukazky">Ukázky</a></li>
-        <li><a href="/#sluzby">Služby</a></li>
-        <li><a href="/#o-mne">O mně</a></li>
-        <li><a href="/#reference">Reference</a></li>
-        <li><a href="/#cenik">Ceník</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="/#kontakt" class="nav-cta">Cenová nabídka</a></li>
-      </ul>
-    </nav>
-  </header>
-
+---
+layout: base.njk
+title: "Webovky a appky na míru Znojmo | Žádné šablony"
+description: "Zapomeňte na pomalý WordPress. Stavím ultra-rychlé custom weby a aplikace ve Znojmě, které vám skutečně vydělají. Podívejte se na mé reference."
+canonical: /tvorba-webu-znojmo
+revised: "6. dubna 2026"
+---
   <main>
     <!-- Hero -->
     <section class="hero">
@@ -561,18 +517,17 @@
           <span class="logo">Zdeněk Podaný</span>
           <p class="footer-desc">Moderní webové stránky pro malé firmy a živnostníky. Působím primárně v okolí Znojma, Pohořelic a Hrušovan.</p>
         </div>
-        
         <div class="footer-links">
           <h4>Navigace</h4>
           <ul class="footer-list">
             <li><a href="/">← Zpět na hlavní stránku</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="/#o-mne">O mně</a></li>
             <li><a href="https://countdownerapp.figma.site" target="_blank" rel="noopener">Countdowner App</a></li>
             <li><a href="/vseobecne-obchodni-podminky">Obchodní podmínky</a></li>
             <li><a href="/zasady-ochrany-osobnich-udaju">Ochrana osobních údajů</a></li>
           </ul>
         </div>
-
         <div class="footer-contact">
           <h4>Kontakt</h4>
           <ul class="footer-list">
@@ -580,7 +535,6 @@
             <li><a href="tel:+420735945421">+420 735 945 421</a></li>
           </ul>
         </div>
-
         <div class="footer-legal">
           <h4>Fakturační údaje</h4>
           <ul class="footer-list">
@@ -589,7 +543,6 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <div class="footer-copyright">
           <p>© <span id="current-year">2025</span> Zdeněk Podaný</p>
@@ -608,38 +561,3 @@
       </div>
     </div>
   </footer>
-
-  <!-- Cookie consent -->
-  <div id="cookie-consent" class="cookie-consent" role="dialog" aria-label="Souhlas s cookies" aria-describedby="cookie-consent-text" hidden>
-    <div class="cookie-consent-inner container">
-      <p id="cookie-consent-text" class="cookie-consent-text">
-        Tento web používá cookies pro měření návštěvnosti (Google Analytics). Pomáhají mi pochopit, jak stránky používáte, abych je mohl zlepšovat. <a href="/zasady-ochrany-osobnich-udaju">Zásady ochrany osobních údajů</a>
-      </p>
-      <div class="cookie-consent-actions">
-        <button type="button" class="btn btn-primary cookie-consent-accept" data-action="accept">
-          Přijmout cookies
-        </button>
-        <button type="button" class="cookie-consent-reject" data-action="reject">
-          Nepřijmout
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <a href="tel:+420735945421" class="call-fab" aria-label="Zavolat na +420 735 945 421">
-    <svg class="call-fab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-  </a>
-  <!-- Vercel Web Analytics — zapni v projektu: vercel.com → Project → Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <!-- Vercel Speed Insights — zapni v projektu: vercel.com → Project → Speed Insights -->
-  <script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/speed-insights/script.js"></script>
-  <script src="script.js" defer></script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wawvgt8jxv");</script>
-</body>
-</html>

@@ -1,0 +1,91 @@
+---
+layout: base.njk
+title: "Blog o webdesignu a SEO | Zdeněk Podaný"
+description: "Praktické rady o tvorbě webů, SEO a online prezentaci pro živnostníky a malé firmy. Bez zbytečné teorie."
+canonical: /blog
+---
+  <main class="section blog-index">
+    <div class="container">
+      <h1 class="section-title">Blog</h1>
+      <p class="section-subtitle">Praktické rady o webdesignu, SEO a online prezentaci pro živnostníky a malé firmy.</p>
+
+      {% if collections.blog.length %}
+      <div class="blog-grid">
+        {% for post in collections.blog %}
+        <article class="blog-card">
+          <a href="{{ post.url }}" class="blog-card-thumb-link" tabindex="-1" aria-hidden="true">
+            <div class="blog-card-thumb{% if not post.data.image %} blog-card-thumb--placeholder{% endif %}">
+              {% if post.data.image %}
+              <img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy">
+              {% endif %}
+            </div>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+              {% if post.data.tags %}
+                {% for tag in post.data.tags %}
+                  {% if tag != "blog" %}<span class="blog-card-tag">{{ tag }}</span>{% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+            <h2 class="blog-card-title">
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h2>
+            {% if post.data.description %}
+            <p class="blog-card-perex">{{ post.data.description }}</p>
+            {% endif %}
+            <a href="{{ post.url }}" class="blog-card-cta">
+              Číst článek
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="blog-empty">Zatím žádné články. Brzy se tu něco objeví.</p>
+      {% endif %}
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo">Zdeněk Podaný</span>
+          <p class="footer-desc">Moderní webové stránky pro malé firmy a živnostníky. Působím primárně v okolí Znojma, Pohořelic a Hrušovan.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigace</h4>
+          <ul class="footer-list">
+            <li><a href="/">← Hlavní stránka</a></li>
+            <li><a href="/#o-mne">O mně</a></li>
+            <li><a href="/tvorba-webu-znojmo">Tvorba webu Znojmo</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/vseobecne-obchodni-podminky">Obchodní podmínky</a></li>
+            <li><a href="/zasady-ochrany-osobnich-udaju">Ochrana osobních údajů</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontakt</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:zdenek@zdenekpodany.cz">zdenek@zdenekpodany.cz</a></li>
+            <li><a href="tel:+420735945421">+420 735 945 421</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Fakturační údaje</h4>
+          <ul class="footer-list">
+            <li>IČO: <a href="https://ares.gov.cz/ekonomicke-subjekty/res/07864825" target="_blank" rel="noopener">07864825</a></li>
+            <li>Účet: 6557870369 / 0800</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>© <span id="current-year">2025</span> Zdeněk Podaný</p>
+        </div>
+      </div>
+    </div>
+  </footer>

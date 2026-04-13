@@ -1,0 +1,86 @@
+---
+layout: base.njk
+ogType: article
+---
+<main class="blog-post">
+
+  <div class="blog-post-container">
+
+    <a href="/blog" class="blog-post-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Zpět na blog
+    </a>
+
+    <article>
+
+      <header class="blog-post-header">
+        <div class="blog-post-meta">
+          <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+          {% if tags %}
+            {% for tag in tags %}
+              {% if tag != "blog" %}<span class="blog-post-tag">{{ tag }}</span>{% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <h1 class="blog-post-title">{{ title }}</h1>
+
+        {% if description %}
+        <p class="blog-post-lead">{{ description }}</p>
+        {% endif %}
+      </header>
+
+      {% if image %}
+      <div class="blog-post-hero">
+        <img src="{{ image }}" alt="{{ title }}" loading="eager">
+      </div>
+      {% endif %}
+
+      <div class="blog-post-body">
+        {{ content | safe }}
+      </div>
+
+      <footer class="blog-post-footer">
+        <a href="/blog" class="blog-post-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Zpět na blog
+        </a>
+      </footer>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Zdeněk Podaný</span>
+        <p class="footer-desc">Moderní webové stránky pro malé firmy a živnostníky. Působím primárně v okolí Znojma, Pohořelic a Hrušovan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigace</h4>
+        <ul class="footer-list">
+          <li><a href="/">← Hlavní stránka</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/tvorba-webu-znojmo">Tvorba webu Znojmo</a></li>
+          <li><a href="/vseobecne-obchodni-podminky">Obchodní podmínky</a></li>
+          <li><a href="/zasady-ochrany-osobnich-udaju">Ochrana osobních údajů</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontakt</h4>
+        <ul class="footer-list">
+          <li><a href="mailto:zdenek@zdenekpodany.cz">zdenek@zdenekpodany.cz</a></li>
+          <li><a href="tel:+420735945421">+420 735 945 421</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>© <span id="current-year">2025</span> Zdeněk Podaný</p>
+      </div>
+    </div>
+  </div>
+</footer>
